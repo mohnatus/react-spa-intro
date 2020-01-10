@@ -1,26 +1,60 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
+import works from './works';
+
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className='app'>
+            <header className='header'>
+                <div className='container'>
+                    <div className='header-brand'>Иван Иванов</div>
+                </div>
+            </header>
+
+            <main className='main'>
+                <div className='about'>
+                    <div className='about__bg'></div>
+                    <div className='container'>
+                        <h1 className='about__title'>
+                            React-разработчик Иван Иванов
+                        </h1>
+                        <div className='about__description'>
+                            <p>
+                                Разрабатываю на самом крутом в мире фреймворке
+                                <br />
+                                самые крутые в мире SPA!
+                            </p>
+                            <p>
+                                С удовольствием и вам что-нибудь разработаю ;)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div className='portfolio'>
+                    <div className='container'>
+                        {works.map((work, index) => (
+                            <a
+                                href={work.link}
+                                className='portfolio-item'
+                                key={index}
+                            >
+                                <img
+                                    className='portfolio-item__screenshot'
+                                    src={work.screenshot}
+                                    alt={work.title}
+                                />
+                                <div className='portfolio-item__title'>
+                                    {work.title}
+                                </div>
+                            </a>
+                        ))}
+                    </div>
+                </div>
+            </main>
+        </div>
+    );
 }
 
 export default App;

@@ -1,0 +1,16 @@
+.header {
+    height: 60px;
+    background-color: darkcyan;
+    color: white;
+}
+
+.header .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.header-brand {
+    font-size: 24px;
+    font-weight: bold;
+}

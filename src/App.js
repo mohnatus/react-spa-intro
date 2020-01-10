@@ -2,53 +2,29 @@ import React from 'react';
 import './App.css';
 
 import works from './works';
+import Header from './components/Header/Header';
+import About from './components/About/About';
+import PortfolioItem from './components/PortfolioItem/PortfolioItem';
 
 function App() {
     return (
         <div className='app'>
-            <header className='header'>
-                <div className='container'>
-                    <div className='header-brand'>Иван Иванов</div>
-                </div>
-            </header>
+            <Header brand='Иван Иванов'></Header>
 
             <main className='main'>
-                <div className='about'>
-                    <div className='about__bg'></div>
-                    <div className='container'>
-                        <h1 className='about__title'>
-                            React-разработчик Иван Иванов
-                        </h1>
-                        <div className='about__description'>
-                            <p>
-                                Разрабатываю на самом крутом в мире фреймворке
-                                <br />
-                                самые крутые в мире SPA!
-                            </p>
-                            <p>
-                                С удовольствием и вам что-нибудь разработаю ;)
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                <About title='React-разработчик Иван Иванов'>
+                    <p>
+                        Разрабатываю на самом крутом в мире фреймворке
+                        <br />
+                        самые крутые в мире SPA!
+                    </p>
+                    <p>С удовольствием и вам что-нибудь разработаю ;)</p>
+                </About>
 
                 <div className='portfolio'>
                     <div className='container'>
-                        {works.map((work, index) => (
-                            <a
-                                href={work.link}
-                                className='portfolio-item'
-                                key={index}
-                            >
-                                <img
-                                    className='portfolio-item__screenshot'
-                                    src={work.screenshot}
-                                    alt={work.title}
-                                />
-                                <div className='portfolio-item__title'>
-                                    {work.title}
-                                </div>
-                            </a>
+                        {works.map(work => (
+                            <PortfolioItem key={work.id} work={work} />
                         ))}
                     </div>
                 </div>

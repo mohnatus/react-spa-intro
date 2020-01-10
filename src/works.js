@@ -11,41 +11,47 @@ export default [
         title: 'SPA #1',
         screenshot: spa1,
         description: 'Первый проект',
-        link: '#'
+        link: '#',
+        stack: ['react', 'redux', 'scss']
     },
     {
         id: 'spa-2',
         title: 'SPA #2',
         screenshot: spa2,
         description: 'Второй проект',
-        link: '#'
+        link: '#',
+        stack: ['react', 'redux', 'scss']
     },
     {
         id: 'spa-3',
         title: 'SPA #3',
         screenshot: spa3,
         description: 'Третий проект',
-        link: '#'
+        link: '#',
+        stack: ['react', 'redux', 'scss']
     },
     {
         id: 'spa-4',
         title: 'SPA #4',
         screenshot: spa4,
         description: 'Четвертый проект',
-        link: '#'
+        link: '#',
+        stack: ['react', 'redux', 'scss']
     },
     {
         id: 'spa-5',
         title: 'SPA #5',
         screenshot: spa5,
         description: 'Пятый проект',
-        link: '#'
+        link: '#',
+        stack: ['react', 'redux', 'scss']
     },
     {
         id: 'spa-6',
         title: 'SPA #6',
         screenshot: spa6,
         description: 'Шестрой проект',
-        link: '#'
+        link: '#',
+        stack: ['react', 'redux', 'scss']
     }
 ];

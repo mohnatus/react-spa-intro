@@ -6,20 +6,20 @@ import ContactForm from '../../components/ContactForm/ContactForm';
 
 import works from '../../works';
 
-class IndexPage extends React.Component {
+class HomePage extends React.Component {
     state = {
-        closed: true
+        closed: true,
     };
 
     openForm() {
         this.setState({
-            closed: false
+            closed: false,
         });
     }
 
     closeForm() {
         this.setState({
-            closed: true
+            closed: true,
         });
     }
 
@@ -37,7 +37,7 @@ class IndexPage extends React.Component {
 
                 <div className='portfolio'>
                     <div className='container'>
-                        {works.map(work => (
+                        {works.map((work) => (
                             <PortfolioItem key={work.id} work={work} />
                         ))}
                     </div>
@@ -67,4 +67,4 @@ class IndexPage extends React.Component {
     }
 }
 
-export default IndexPage;
+export default HomePage;

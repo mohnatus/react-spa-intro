@@ -17,7 +17,7 @@ class App extends React.Component {
                     <Switch>
                         <Route path='/project/:id' component={ProjectPage} />
                         <Route exact path='/' component={HomePage} />
-                        <Redirect to='/' />>
+                        <Redirect to='/' />
                     </Switch>
                 </main>
             </div>
